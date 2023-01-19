@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="t-chrome t-chrome109"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<head id="Head1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><link id="Icon" rel="icon" type="image/x-icon" href="http://192.168.1.2/UOF/logo.ico">
+	<title>
+		財團法人弘道老人福利基金會
+	</title>
+	<link id="ApplicationRoot" rel="home" href="http://192.168.1.2/UOF/"><meta name="referrer" content="no-referrer"><meta name="description" content="ALL IN ONE 集完美於一身的全方位行動化辦公室，管理交給U-Office Force，絕佳績效為您所有。支援手機、平板、PC，無論何時何地，透過UOF就能於各種裝置上輕鬆辦公事。">
+    <style>
+        body, .ui.button, .ui.form input[type="text"], .ui.form input[type="password"] , .ui.message .header, .ui.header {
+            font-family: "Segoe UI", Arial, Helvetica,"文泉驛正黑", "WenQuanYi Zen Hei", "微軟正黑體", "Microsoft JhengHei", "黑體-繁","Heiti TC","微软雅黑","Microsoft YaHei", sans-serif !important;
+        }
+
+        .required.field input[type="text"] {
+            font: 99% "Segoe UI", Arial, Helvetica, "文泉驛正黑", "WenQuanYi Zen Hei", "微軟正黑體", "Microsoft JhengHei", "黑體-繁", "Heiti TC", "微软雅黑", "Microsoft YaHei", sans-serif !important;
+        }
+
+        .ui.grid {
+            height: 100%;
+        }
+
+        .ui.error.login div{
+            display:block;
+            text-indent : -1em ;
+        }
+        
+        .ui.error.login span:before{
+            content: "．";
+        }
+        
+        #lblLicenseExpireDate span {          
+            color:#FF9F1C;
+        }
+
+        .login-question {
+            font-size: 3rem !important;
+        }
+
+      #cboKeepaccount:checked ~ label:before,
+      #cboKeepaccount:focus:checked~label:before{
+          background-color :#4d4d4d  !important;
+      }
+      #btnCancelLogin {
+          background-color: gray !important;
+      }
+    </style>
+	
+    <link href="./semantic.css" rel="stylesheet">
+	<link href="./uof-fixed.css" rel="stylesheet">
+	<link href="./font-awesome.min.css" rel="stylesheet">
+	<link href="./StyleSheet.css" type="text/css" rel="stylesheet">
+	<link href="./webpart.css" type="text/css" rel="stylesheet">
+	</head>
+	
+<body>
+    <style>
+        .mainbox {
+            background-image:url("./loginbg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;            
+        }
+
+            .mainbox > .column > .grid > div {
+                background-color: rgba(255,255,255,0.8);
+                 width:360px !important;
+            }                   
+
+        @media only screen and (max-width: 768px) {
+            .mainbox {
+                background-image: none;
+            }
+
+             .mainbox > .column > .grid > div {            
+                 width:100% !important;
+            }
+        }
+        
+    </style>
+    <form method="post" action="http://192.168.1.2/UOF/Login.aspx?ReturnUrl=%2fUOF%2f"  id="form1" class="ui large form"> 
+       <div class="ui padded grid mainbox"><!--左側欄位置!-->
+       <div class="stretched column"><!--右側欄位置!-->
+       <div class="ui grid"><!--三欄位置!-->                                
+       <div class="right floated stretched column"><!--右側欄固定位置!-->
+<!--  <div class="ui grid">!-->
+       <div class="top aligned stretched row">
+       <div class="column">
+		    <h2 class="ui teal image center aligned header">
+            <img id="imgLogo" class="ui small image" src="./1steLogo.gif" style="min-width:150px !important;max-width:290px !important;width:auto !important;">
+            </h2>
+		    <div id="loginSegment"><!--右側欄-->
+            <div id="UpdatePanel1"><!--右側欄-->                                         
+	        <div class="field" style="height: 2.5em;"><!--右側欄-->
+            <div class="ui dropdown selection" tabindex="0">
+			<i ></i><!--icon !-->
+			<i class="dropdown icon red"></i><div class="text">繁體中文</div>
+				<div class="menu" tabindex="-1">
+					<div class="item" data-value="en-US">English</div>
+					<div class="item active selected" data-value="zh-TW">繁體中文</div>
+					<div class="item" data-value="zh-CN">简体中文</div>
+					<div class="item" data-value="ja-JP">日本語</div>
+				</div>
+			</div>                                              
+			</div>
+		   <div class="required field">
+		   <div class="ui left icon input">
+                <input name="username" type="text" id="txtAccount" tabindex="1" placeholder="帳號">
+              </div>
+             </div>
+			<div class="field">
+				 <div class="ui left icon input">
+               <!--  <i class="lock icon red"></i> !-->
+                 <input name="password" type="password" id="txtPwd" tabindex="2" placeholder="密碼" autocomplete="off">
+                 </div>
+			</div>
+			<div class="field">
+				 <div class="ui toggle  checkbox">
+				 <input id="cboKeepaccount" type="checkbox" name="cboKeepaccount" tabindex="4"><label for="cboKeepaccount">記住我的帳號</label>
+                 </div>
+            </div>
+            <div class="field">
+				 <input type="submit" name="btnSubmit" value="登入" tabindex="3" class="ui fluid large submit button red">
+			</div>
+			<div class="field">
+			<a id="hlForgetpw" class="ui icon fluid large button red">忘記密碼</a>
+            </div>
+  			<div class="field">
+				<div class="field">
+				</div>                    
+				<div class="ui error message login" style="display: none;"></div>                                                     
+            </div>
+            </div><!-- 2023/1/17 !-->
+			<div id="UpdatePanel6">
+	        <div id="LogingWait" style="margin: 0 auto 0 auto; text-align: center;display:none">                         <h3 class="ui icon  header red">                                             
+            <i class="fa fa-5x fa-cog fa-spin"></i>
+            <div class="content">
+            <span id="lbLoginWait">登入中,請稍候</span>
+            </div>
+            </h3>
+            <div id="loadingAnimation" style="margin: 2px auto 2px auto;"></div>
+            </div>
+            </div>
+		    </div>
+		    </div>
+		   <div class="bottom aligned row">
+           <div class="sixteen wide center aligned column">
+           <span id="lbCopyRight" style="font-size:Small;">2023 e-Excellence Inc. All Rights Reserved.<br>一等一科技 版權所有.</span>
+           </div>
+		   </div>
+           </div>
+           </div>
+           </div>              
+           </div>
+           </div>
+            
+</form>
+</body>
+</html>
